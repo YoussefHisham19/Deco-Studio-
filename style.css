@@ -1,0 +1,203 @@
+html{
+    
+    
+}
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: "Cormorant", serif;
+  font-optical-sizing: auto;
+  font-weight: 1000 ;
+  font-style: normal;
+}
+
+body::before {
+  content: "";
+  position: fixed;   /* الخلفية تفضل ثابتة */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("Background.webp") repeat center center / contain ;
+  filter: blur(10px);
+  z-index: -1;       /* يخليها ورا المحتوى */
+}
+nav{
+  backdrop-filter: blur(8px );
+  text-align: center ;
+  position:relative ;
+}
+  #logo02{
+  width:5rem ;
+  height:5rem ;
+  position:fixed ;
+  top: 1rem ;
+  left: 0.5rem ;
+  z-index:1000 ;
+  border-radius:50%;
+}
+a{
+  text-decoration:none ;
+  color:#81591B ;
+  background:#FFFFFF ;
+  border-radius:1rem ;
+  padding:0.5rem  ;
+  transition:0.3s ;
+}
+a:hover {
+  background:#81591B ;
+  color:#FFFFFF ;
+  box-shadow:0 0 1rem #D0891B;
+}
+#latsha {
+  clip-path: circle(48.6% at 50% 50%);
+  background: #81591B;
+}
+header{
+  position:relative ;
+}
+
+#whyus h3{
+  border-bottom: 5px solid #81591B;
+}
+#filterBtns{
+  display:flex ;
+  justify-content:center ;
+  gap:1rem ;
+  margin:4rem 0 ;
+}
+.btn{
+  border-radius:1rem ;
+  border: none ;
+  font-weight:bold ;
+  color: #81591B;
+  transition:0.3s ;
+}
+.active{
+  background:#81591B ;
+  color:#FFFFFF ;
+  box-shadow:0 0 1rem #DFB16A ;
+}
+#products {
+  display:flex ;
+  flex-wrap:wrap ;
+  flex-grow: 1;
+  gap: 1rem ;
+  justify-content:center ;
+  animation:moveBox 0.5s  ease-in-out ;
+}
+@keyframes moveBox{
+  from{
+    transform:scale(0.5 );
+    opacity:0.5 ;
+  }to{
+    transform:scale(1);
+opacity:1;
+  }
+}
+.product {
+  animation:moveBox 0.5s  ease-in-out ;
+}
+@keyframes moveBox{
+  from{
+    transform:scale(0.5 );
+    opacity:0.5 ;
+  }to{
+    transform:scale(1);
+opacity:1;
+  } }
+ .product{
+   background:#AC7420;
+   text-align:center ;
+ }
+@media(max-width:600px ){
+  header, nav{
+    font-size:1rem ;
+  }
+  header h3{
+    font-size:1rem ;
+  }
+  header p{
+    padding:1rem ;
+    font-size:1.5rem ;
+    margin-top:3rem ;
+  }
+  header #latsha{
+    height:16rem ;
+    width:16rem ;
+    background:#81591B;
+    position:absolute ;
+    right:1rem ;
+    top:13.5rem ;
+  }
+  header .logo{
+    height:15rem ;
+    width:15rem ;
+    position:absolute ;
+    right : 1rem ;
+    top: 12rem ;
+  }
+  #whyus h3, p{
+    margin-top:10rem ;
+    font-size:1.5rem ;
+  }
+  #whyus p{
+    margin-top:1rem ;
+  }
+ #filterBtns .btn{
+   height:3rem ;
+   width:5rem ;
+   font-size:1rem ;
+ }
+/*.product{
+  height:25rem ;
+}*/
+.product p{
+  margin-top :0;
+}
+.product .img {
+  height:10rem ;
+  width:10rem ;
+}
+}
+@media (max-width:992px) {
+  header, nav{
+    font-size:2rem ;
+  }
+  header h3{
+    font-size:2rem ;
+  }
+  header p{
+    padding:1rem ;
+  }
+  #latsha{
+    height:25rem ;
+    width:25rem ;
+    background:#81591B;
+    position:absolute ;
+    right:1rem ;
+    top:5rem ;
+  }
+  header img {
+    height:24rem ;
+    width:24rem ;
+    position:absolute ;
+    right : 1rem ;
+    top: 3.5rem ;
+  }
+  #whyus{
+    margin-top:22rem ;
+    font-size:2rem ;
+  }
+ .btn{
+   height:3rem ;
+   width:8rem ;
+   font-size:1rem ;
+ }
+ 
+.product img {
+  height:18rem ;
+  width:18rem ;
+}
+}
